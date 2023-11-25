@@ -10,6 +10,11 @@ import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletInputStream;
 import javax.servlet.ServletRequest;
 
+/**
+ * 新增RequestFacade的原因是：Request除了实现ServletRequest接口，还有一些自己公共的方法，
+ * 但是这些方法又不希望被Servlet实例能访问，所以就新增一个额外的RequestFacade，作为Request的外观类，
+ * 这样传递给Servlet的Request对象就只有ServletRequest接口本身的方法，保护了Request本身的一些方法不被Servlet访问到
+ */
 public class RequestFacade implements ServletRequest {
 
   private ServletRequest request = null;
