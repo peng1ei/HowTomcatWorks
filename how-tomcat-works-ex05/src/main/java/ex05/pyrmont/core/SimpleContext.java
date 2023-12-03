@@ -45,8 +45,11 @@ public class SimpleContext implements Context, Pipeline {
   protected HashMap children = new HashMap();
   protected Loader loader = null;
   protected SimplePipeline pipeline = new SimplePipeline(this);
+  // URL和Servlet的一一映射
   protected HashMap servletMappings = new HashMap();
+  // 默认映射器
   protected Mapper mapper = null;
+  // 所有映射器
   protected HashMap mappers = new HashMap();
   private Container parent = null;
 

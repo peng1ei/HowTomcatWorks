@@ -18,6 +18,9 @@
 package org.apache.juli.logging;
 
 
+import org.apache.catalina.servlets.juli.logging.Log;
+import org.apache.catalina.servlets.juli.logging.LogConfigurationException;
+
 import java.util.Properties;
 
 
@@ -126,7 +129,7 @@ public /* abstract */ class LogFactory {
     public static final String HASHTABLE_IMPLEMENTATION_PROPERTY =
         "org.apache.commons.logging.LogFactory.HashtableImpl";
     
-    private static LogFactory singleton=new LogFactory();
+    private static org.apache.catalina.servlets.juli.logging.LogFactory singleton=new org.apache.catalina.servlets.juli.logging.LogFactory();
 
     Properties logConfig;
     
@@ -167,7 +170,7 @@ public /* abstract */ class LogFactory {
      */
     public Log getInstance(String name)
         throws LogConfigurationException {
-        return DirectJDKLog.getInstance(name);
+        return org.apache.catalina.servlets.juli.logging.DirectJDKLog.getInstance(name);
     }
 
 
@@ -179,7 +182,7 @@ public /* abstract */ class LogFactory {
      * class loader would prevent garbage collection.
      */
     public void release() {
-        DirectJDKLog.release();
+        org.apache.catalina.servlets.juli.logging.DirectJDKLog.release();
     }
 
     /**
@@ -277,7 +280,7 @@ public /* abstract */ class LogFactory {
      * @exception LogConfigurationException if the implementation class is not
      *  available or cannot be instantiated.
      */
-    public static LogFactory getFactory() throws LogConfigurationException {
+    public static org.apache.catalina.servlets.juli.logging.LogFactory getFactory() throws LogConfigurationException {
         return singleton;
     }
 
@@ -317,7 +320,7 @@ public /* abstract */ class LogFactory {
 
 
     /**
-     * Release any internal references to previously created {@link LogFactory}
+     * Release any internal references to previously created {@link org.apache.catalina.servlets.juli.logging.LogFactory}
      * instances that have been associated with the specified class loader
      * (if any), after calling the instance method <code>release()</code> on
      * each of them.
@@ -330,7 +333,7 @@ public /* abstract */ class LogFactory {
 
 
     /**
-     * Release any internal references to previously created {@link LogFactory}
+     * Release any internal references to previously created {@link org.apache.catalina.servlets.juli.logging.LogFactory}
      * instances, after calling the instance method <code>release()</code> on
      * each of them.  This is useful in environments like servlet containers,
      * which implement application reloading by throwing away a ClassLoader.

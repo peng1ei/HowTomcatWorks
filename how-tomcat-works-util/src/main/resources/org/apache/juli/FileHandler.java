@@ -189,7 +189,7 @@ public class FileHandler
         String tsString = ts.toString().substring(0, 19);
         date = tsString.substring(0, 10);
 
-        String className = FileHandler.class.getName();
+        String className = org.apache.catalina.servlets.juli.FileHandler.class.getName();
         
         ClassLoader cl = Thread.currentThread().getContextClassLoader();
         

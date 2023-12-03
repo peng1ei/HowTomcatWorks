@@ -18,6 +18,8 @@
 
 package org.apache.juli.logging;
 
+import org.apache.catalina.servlets.juli.logging.LogFactory;
+
 /**
  * <p>A simple logging interface abstracting logging APIs.  In order to be
  * instantiated successfully by {@link LogFactory}, classes that implement

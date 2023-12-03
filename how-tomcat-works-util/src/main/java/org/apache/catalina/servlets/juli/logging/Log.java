@@ -16,7 +16,7 @@
  */ 
 
 
-package org.apache.juli.logging;
+package org.apache.catalina.servlets.juli.logging;
 
 /**
  * <p>A simple logging interface abstracting logging APIs.  In order to be

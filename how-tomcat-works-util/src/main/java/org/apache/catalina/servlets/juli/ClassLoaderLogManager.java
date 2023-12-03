@@ -15,7 +15,7 @@
  * limitations under the License.
  */
 
-package org.apache.juli;
+package org.apache.catalina.servlets.juli;
 
 import java.io.File;
 import java.io.FileInputStream;

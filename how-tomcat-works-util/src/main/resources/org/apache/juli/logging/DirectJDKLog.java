@@ -17,6 +17,8 @@
 
 package org.apache.juli.logging;
 
+import org.apache.catalina.servlets.juli.logging.Log;
+
 import java.util.logging.ConsoleHandler;
 import java.util.logging.Formatter;
 import java.util.logging.Handler;
@@ -175,7 +177,7 @@ class DirectJDKLog implements Log {
     }
     
     static Log getInstance(String name) {
-        return new DirectJDKLog( name );
+        return new org.apache.catalina.servlets.juli.logging.DirectJDKLog( name );
     }
 }
 
